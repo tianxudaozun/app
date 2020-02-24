@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/main_top">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentTop="true"
+            android:text="蓝牙检修系统"
+            android:textColor="@color/colorWhite"
+            android:textSize="19sp"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/main_left_machine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="左机"
+        android:layout_below="@id/main_top"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="64dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="右机"
+        android:layout_below="@id/main_left_machine"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/main_right_machine"
+        android:textSize="18sp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="64dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中间"
+        android:layout_below="@id/main_right_machine"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/main_mid_machine"
+        android:textSize="18sp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="64dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设备搜索"
+        android:layout_below="@id/main_mid_machine"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/main_device_scan"
+        android:textSize="18sp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="64dp"/>
+
+    <Button
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="断开连接"
+        android:layout_below="@id/main_device_scan"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:id="@+id/main_device_not_connected"
+        android:background="@android:color/white"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_marginTop="64dp"/>
+
+</RelativeLayout>

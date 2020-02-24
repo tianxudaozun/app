@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_left.Left_MachineActivity"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/back_mid"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/ic_arrow_back_white_24dp" />
+
+                <TextView
+                    android:id="@+id/title_mid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:textSize="19sp"
+                    android:text="中间"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="电机检测"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="取货电机(M1)"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="旋转电机(M2)"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="开腔电机(M3)"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="升降电机(M4)"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="正向" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:id="@+id/mid_Pick_up_goods_Electric_machinery_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="↑" />
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/mid_Pick_up_goods_Electric_machinery_up"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/mid_Pick_up_goods_Electric_machinery_up_indicator_light"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:id="@+id/mid_rotate_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="←"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/mid_rotate_left"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/mid_rotate_left_indicator_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="←"
+                        android:id="@+id/mid_Open_up_left"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/mid_Open_up_left"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/mid_Open_up_left_indicator_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:id="@+id/mid_Lifting_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="↑"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/mid_Lifting_up"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/mid_Lifting_up_indicator_light"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="反向" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="↓"
+                        android:id="@+id/mid_Pick_up_goods_Electric_machinery_down" />
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/mid_Pick_up_goods_Electric_machinery_down"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/mid_Pick_up_goods_Electric_machinery_down_indicator_light"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="→"
+                        android:id="@+id/mid_rotate_right" />
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/mid_rotate_right"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/mid_rotate_right_indicator_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="→"
+                        android:id="@+id/mid_Open_up_right"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/mid_Open_up_right"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/mid_Open_up_right_indicator_light"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="↓"
+                        android:id="@+id/mid_Lifting_down"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/mid_Lifting_down"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/mid_Lifting_down_indicator_light"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="@color/colorGrey"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="信号检测"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="4">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="接近"
+                        android:gravity="center"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上限U"
+                            android:id="@+id/mid_Upper_limit"
+                            android:layout_centerInParent="true"/>
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/mid_Upper_limit"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/mid_Upper_limit_light"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="平台P"
+                            android:id="@+id/mid_platform"
+                            android:layout_centerInParent="true"/>
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/mid_platform"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/mid_platform_light"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:id="@+id/mid_lower_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="下限D" />
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/mid_lower_limit"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/mid_lower_limit_light"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="取货"
+                        android:gravity="center"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="开门O"
+                            android:id="@+id/mid_Pick_up_goods_open"
+                            android:layout_centerInParent="true"/>
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/mid_Pick_up_goods_open"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/mid_Pick_up_goods_open_light"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:id="@+id/mid_Pick_up_goods_close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="关门C" />
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/mid_Pick_up_goods_close"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/mid_Pick_up_goods_close_light"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrey"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="4">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="光电"
+                        android:gravity="center"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="落货PS1"
+                            android:id="@+id/mid_Drop_goods_ps1"
+                            android:layout_centerInParent="true"/>
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/mid_Drop_goods_ps1"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/mid_Drop_goods_ps1_light"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="平台PS2"
+                            android:id="@+id/mid_platform_ps2"
+                            android:layout_centerInParent="true"/>
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/mid_platform_ps2"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/mid_platform_ps2_light"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:id="@+id/left_huo_Shipment_ps3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="出货PS3" />
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/left_huo_Shipment_ps3"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/mid_huo_Shipment_ps3_light"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorGrey"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="霍\n尔"
+                        android:gravity="center"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="开腔O"
+                            android:id="@+id/mid_open_up_hr"
+                            android:layout_centerInParent="true"/>
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/mid_open_up_hr"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/mid_open_up_hr_light"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:id="@+id/mid_close_down_hr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="关腔C" />
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/mid_close_down_hr"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/mid_close_down_hr_light"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="@color/colorGrey"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="动作检测"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/mid_position_Fixed_inspection"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="位置定检" />
+
+                <Button
+                    android:id="@+id/mid_superior"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="上位"
+                    android:layout_marginStart="12dp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="平台"
+                    android:id="@+id/mid_platform_position_fixed"
+                    android:layout_marginStart="6dp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/mid_down_position_fixed"
+                    android:layout_marginStart="6dp"
+                    android:text="下位"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="内腔检测"
+                    android:id="@+id/mid_Intracavity_detection"/>
+
+                <Button
+                    android:id="@+id/mid_Intracavity_detection_open"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="开门"
+                    android:layout_marginStart="12dp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="关门"
+                    android:id="@+id/mid_Intracavity_detection_close"
+                    android:layout_marginStart="6dp"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="取货检测"
+                    android:id="@+id/mid_pick_up_goods_detection"/>
+
+                <Button
+                    android:id="@+id/mid_pick_up_goods_detection_open"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="开门"
+                    android:layout_marginStart="12dp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="关门"
+                    android:id="@+id/mid_pick_up_goods_detection_close"
+                    android:layout_marginStart="6dp"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/mid_Photoelectricity_inspection"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="光电定检" />
+
+                <Button
+                    android:id="@+id/mid_Photoelectricity_inspection_Drop_goods"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="落货"
+                    android:layout_marginStart="12dp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="出货"
+                    android:id="@+id/mid_Photoelectricity_inspection_Shipment"
+                    android:layout_marginStart="6dp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/mid_Photoelectricity_inspection_platform"
+                    android:layout_marginStart="6dp"
+                    android:text="平台"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/mid_microwave_testing"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="微波测试" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:gravity="center"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/mid_microwave_testing_m_edit"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="6dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="秒"
+                        android:gravity="center"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/mid_microwave_testing_s_edit"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="6dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/mid_microwave_testing_go"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Go" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="系统重置"
+                    android:id="@+id/mid_os_reset"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="紧急停止"
+                    android:id="@+id/mid_urgent_stop"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="蓝牙连线"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="12dp"/>
+
+                <View
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/mid_bt_conn"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/indicator_light_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="位置重置"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_left.Left_MachineActivity"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/back_right"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/ic_arrow_back_white_24dp" />
+
+                <TextView
+                    android:id="@+id/title_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:text="右机"
+                    android:textSize="19sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="电机检测"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="开门电机"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="推送电机"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="输送电机"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="平移电机"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="升降电机"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="正向" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:id="@+id/left_open_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="→"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_open_right"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/left_open_right_indicator_light"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:id="@+id/left_push_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="→" />
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_push_right"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/left_push_right_indicator_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:id="@+id/left_Transportation_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="→" />
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_Transportation_right"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/left_Transportation_right_indicator_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="→"
+                        android:id="@+id/left_translation_right"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_translation_right"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/left_translation_right_indicator_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:id="@+id/left_Lifting_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="↑" />
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_Lifting_up"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/left_Lifting_up_indicator_light"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="反向" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="←"
+                        android:id="@+id/left_open_left"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_open_left"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/left_open_left_indicator_light"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="←"
+                        android:id="@+id/left_push_left"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_push_left"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/left_push_left_indicator_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="←"
+                        android:id="@+id/left_Transportation_left"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_Transportation_left"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/left_Transportation_left_indicator_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="←"
+                        android:id="@+id/left_translation_left" />
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_translation_left"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/left_translation_left_indicator_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="↓"
+                        android:id="@+id/left_Lifting_down"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_Lifting_down"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_gray"
+                        android:id="@+id/left_Lifting_down_indicator_light"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="@color/colorGrey"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="信号检测"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:text="微动"
+                    android:gravity="center"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上限"
+                        android:id="@+id/left_Upper_limit"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_Upper_limit"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_red"
+                        android:id="@+id/left_Upper_limit_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="下限"
+                        android:id="@+id/left_lower_limit"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_lower_limit"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_red"
+                        android:id="@+id/left_lower_limit_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="非出"
+                        android:id="@+id/left_no_out"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_no_out"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_red"
+                        android:id="@+id/left_no_out_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:id="@+id/left_Shipment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="出货" />
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_Shipment"
+                        android:layout_marginTop="-2dp"
+                        android:background="@drawable/indicator_light_red"
+                        android:id="@+id/left_Shipment_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="复位"
+                        android:id="@+id/left_reset"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_reset"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_red"
+                        android:id="@+id/left_reset_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="开门"
+                        android:id="@+id/left_open_dore"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_open_dore"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_red"
+                        android:id="@+id/left_open_dore_light"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关门"
+                        android:id="@+id/left_close_dore"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@id/left_close_dore"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/indicator_light_red"
+                        android:id="@+id/left_close_dore_light"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrey"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="4">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="霍尔"
+                        android:gravity="center"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="水平"
+                            android:id="@+id/left_horizontal"
+                            android:layout_centerInParent="true"/>
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/left_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/left_horizontal_hr"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="垂直"
+                            android:id="@+id/left_vertical"
+                            android:layout_centerInParent="true"/>
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/left_vertical"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/left_vertical_hr"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:id="@+id/left_huo_Shipment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="出货" />
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/left_huo_Shipment"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/left_huo_Shipment_hr"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorGrey"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="光\n电"
+                        android:gravity="center"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="垂直"
+                            android:id="@+id/left_Photoelectricity_vertical"
+                            android:layout_centerInParent="true"/>
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/left_Photoelectricity_vertical"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/left_Photoelectricity_vertical_light"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:id="@+id/left_Photoelectricity_Shipment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="出货" />
+
+                        <View
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_below="@id/left_Photoelectricity_Shipment"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/indicator_light_red"
+                            android:id="@+id/left_Photoelectricity_Shipment_light"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="@color/colorGrey"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="动作检测"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/left_position_qj"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="位置全检" />
+
+                <Button
+                    android:id="@+id/left_Antifreeze_test"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="防冻测试" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="完成存储"
+                    android:id="@+id/left_saved"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="位置定检"
+                    android:id="@+id/left__position_fixed"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="层数"
+                        android:id="@+id/left__position_fixed_ceng"
+                        android:layout_alignParentTop="true"/>
+                    <EditText
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/left_position_fixed_ceng_edit"
+                        android:layout_below="@id/left__position_fixed_ceng"
+                        android:layout_centerVertical="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"/>
+                    <Button
+                        android:layout_width="49dp"
+                        android:layout_height="36dp"
+                        android:text="Go"
+                        android:layout_toEndOf="@id/left_position_fixed_ceng_edit"
+                        android:layout_centerVertical="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        android:id="@+id/left_position_fixed_ceng_edit_go"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="列数"
+                        android:id="@+id/left__position_fixed_lie"
+                        android:layout_alignParentTop="true"/>
+                    <EditText
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/left_position_fixed_lie_edit"
+                        android:layout_below="@id/left__position_fixed_lie"
+                        android:layout_centerVertical="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"/>
+                    <Button
+                        android:layout_width="49dp"
+                        android:layout_height="36dp"
+                        android:text="Go"
+                        android:layout_toEndOf="@id/left_position_fixed_lie_edit"
+                        android:layout_centerVertical="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        android:id="@+id/left_position_fixed_lie_edit_go"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="出货定检"
+                    android:id="@+id/left_Shipment_fixed"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="层数"
+                        android:id="@+id/left_Shipment_fixed_ceng"
+                        android:layout_alignParentTop="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="列数"
+                        android:id="@+id/left_Shipment_fixed_lie"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@id/left_Shipment_fixed_ceng"
+                        android:layout_marginStart="20dp"/>
+
+                    <EditText
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/left_Shipment_fixed_ceng_edit"
+                        android:layout_below="@id/left_Shipment_fixed_ceng"
+                        android:layout_centerVertical="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"/>
+
+                    <EditText
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/left_Shipment_fixed_lie_edit"
+                        android:layout_below="@id/left_Shipment_fixed_lie"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/left_Shipment_fixed_ceng_edit"
+                        android:layout_marginStart="12dp"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"/>
+
+                    <Button
+                        android:layout_width="49dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_toEndOf="@id/left_Shipment_fixed_lie_edit"
+                        android:text="Go"
+                        android:layout_centerVertical="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        android:id="@+id/left_Shipment_fixed_ceng_lie_edit_go"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+
+                <Button
+                    android:id="@+id/left_stepping_testing"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="步进定检" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="2">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:text="→"
+                        android:id="@+id/left_stepping_right"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:text="←"
+                        android:id="@+id/left_stepping_left"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:text="↑"
+                        android:id="@+id/left_stepping_up"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:text="↓"
+                        android:id="@+id/left_stepping_down"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="系\n统\n重\n置"
+                android:id="@+id/left_os_reset"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="紧\n急\n停\n止"
+                android:id="@+id/left_urgent_stop"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
