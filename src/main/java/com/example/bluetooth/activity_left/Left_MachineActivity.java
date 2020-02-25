@@ -62,39 +62,111 @@ public class Left_MachineActivity extends AppCompatActivity implements View.OnTo
                                 switch (id){
                                     case R.id.left_Upper_limit_light:
                                         left_Upper_limit_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                left_Upper_limit_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
                                         break;
                                     case R.id.left_lower_limit_light:
                                         left_lower_limit_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                left_lower_limit_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
                                         break;
                                     case R.id.left_no_out_light:
                                         left_no_out_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                left_no_out_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
                                         break;
                                     case R.id.left_Shipment_light:
                                         left_Shipment_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                left_Shipment_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
                                         break;
                                     case R.id.left_reset_light:
                                         left_reset_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                left_reset_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
                                         break;
                                     case R.id.left_open_dore_light:
                                         left_open_dore_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                left_open_dore_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
                                         break;
                                     case R.id.left_close_dore_light:
                                         left_close_dore_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                left_close_dore_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
                                         break;
                                     case R.id.left_horizontal_hr:
                                         left_horizontal_hr.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                left_horizontal_hr.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
                                         break;
                                     case R.id.left_vertical_hr:
                                         left_vertical_hr.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                left_vertical_hr.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
                                         break;
                                     case R.id.left_huo_Shipment_hr:
                                         left_huo_Shipment_hr.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                left_huo_Shipment_hr.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
                                         break;
                                     case R.id.left_Photoelectricity_vertical_light:
                                         left_Photoelectricity_vertical_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                left_Photoelectricity_vertical_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
                                         break;
                                     case R.id.left_Photoelectricity_Shipment_light:
                                         left_Photoelectricity_Shipment_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                left_Photoelectricity_Shipment_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
                                         break;
                                     default: break;
                                 }
@@ -506,6 +578,7 @@ public class Left_MachineActivity extends AppCompatActivity implements View.OnTo
                     continuousClick = true;
                 }
             }
+
             service.execute(new Runnable() {
                 @Override
                 public void run() {

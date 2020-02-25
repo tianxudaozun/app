@@ -60,48 +60,105 @@ public class Mid_MachineActivity extends AppCompatActivity implements View.OnTou
                         @Override
                         public void run() {
                             String cmd = intent.getStringExtra(BluetoothService.BT_RECEIVE_CMD);
-                            HashSet<Integer> integers = checkLight_set.get(cmd);
-                            for(Integer id : Objects.requireNonNull(integers)){
-                                if (id != null) {
-                                    switch (id) {
-                                        case R.id.mid_Upper_limit_light:
-                                            mid_Upper_limit_light.setBackgroundResource(R.drawable.indicator_light_green);
-                                            break;
-                                        case R.id.mid_platform_light:
-                                            mid_platform_light.setBackgroundResource(R.drawable.indicator_light_green);
-                                            break;
-                                        case R.id.mid_lower_limit_light:
-                                            mid_lower_limit_light.setBackgroundResource(R.drawable.indicator_light_green);
-                                            break;
-                                        case R.id.mid_Pick_up_goods_open_light:
-                                            mid_Pick_up_goods_open_light.setBackgroundResource(R.drawable.indicator_light_green);
-                                            break;
-                                        case R.id.mid_Pick_up_goods_close_light:
-                                            mid_Pick_up_goods_close_light.setBackgroundResource(R.drawable.indicator_light_green);
-                                            break;
-                                        case R.id.mid_Drop_goods_ps1_light:
-                                            mid_Drop_goods_ps1_light.setBackgroundResource(R.drawable.indicator_light_green);
-                                            break;
-                                        case R.id.mid_platform_ps2_light:
-                                            mid_platform_ps2_light.setBackgroundResource(R.drawable.indicator_light_green);
-                                            break;
-                                        case R.id.mid_huo_Shipment_ps3_light:
-                                            mid_huo_Shipment_ps3_light.setBackgroundResource(R.drawable.indicator_light_green);
-                                            break;
-                                        case R.id.mid_open_up_hr_light:
-                                            mid_open_up_hr_light.setBackgroundResource(R.drawable.indicator_light_green);
-                                            break;
-                                        case R.id.mid_close_down_hr_light:
-                                            mid_close_down_hr_light.setBackgroundResource(R.drawable.indicator_light_green);
-                                            break;
-                                        default:
-                                            break;
-                                    }
+                            Integer id = checkLight.get(cmd);
+                            if(id != null){
+                                switch (id) {
+                                    case R.id.mid_Upper_limit_light:
+                                        mid_Upper_limit_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                mid_Upper_limit_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
+                                        break;
+                                    case R.id.mid_platform_light:
+                                        mid_platform_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                mid_platform_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
+                                        break;
+                                    case R.id.mid_lower_limit_light:
+                                        mid_lower_limit_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                mid_lower_limit_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
+                                        break;
+                                    case R.id.mid_Pick_up_goods_open_light:
+                                        mid_Pick_up_goods_open_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                mid_Pick_up_goods_open_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
+                                        break;
+                                    case R.id.mid_Pick_up_goods_close_light:
+                                        mid_Pick_up_goods_close_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                mid_Pick_up_goods_close_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
+                                        break;
+                                    case R.id.mid_Drop_goods_ps1_light:
+                                        mid_Drop_goods_ps1_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                mid_Drop_goods_ps1_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
+                                        break;
+                                    case R.id.mid_platform_ps2_light:
+                                        mid_platform_ps2_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                mid_platform_ps2_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
+                                        break;
+                                    case R.id.mid_huo_Shipment_ps3_light:
+                                        mid_huo_Shipment_ps3_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                mid_huo_Shipment_ps3_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
+                                        break;
+                                    case R.id.mid_open_up_hr_light:
+                                        mid_open_up_hr_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                mid_open_up_hr_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
+                                        break;
+                                    case R.id.mid_close_down_hr_light:
+                                        mid_close_down_hr_light.setBackgroundResource(R.drawable.indicator_light_green);
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                mid_close_down_hr_light.setBackgroundResource(R.drawable.indicator_light_red);
+                                            }
+                                        }, 1000);
+                                        break;
+                                    default:
+                                        break;
                                 }
                             }
                         }
                     });
-
 
                 }
             }
@@ -139,41 +196,19 @@ public class Mid_MachineActivity extends AppCompatActivity implements View.OnTou
     private View mid_close_down_hr_light;          //关腔C
 
 
-    private static final HashSet<Integer> _83_01_01_ = new HashSet<>();
-    private static final HashSet<Integer> _83_02_01_ = new HashSet<>();
-
     static {
+        checkLight.put("555A0183010100000000", R.id.mid_Upper_limit_light);
+        checkLight.put("555A0183020100000000", R.id.mid_platform_light);
+        checkLight.put("555A0183030100000000", R.id.mid_lower_limit_light);
+        checkLight.put("555A0183040100000000", R.id.mid_Pick_up_goods_open_light);
+        checkLight.put("555A0183050100000000", R.id.mid_Pick_up_goods_close_light);
 
-        _83_01_01_.add(R.id.mid_Upper_limit_light);
-        _83_01_01_.add(R.id.mid_lower_limit_light);
-        _83_01_01_.add(R.id.mid_Pick_up_goods_close_light);
-        _83_01_01_.add(R.id.mid_Drop_goods_ps1_light);
-        _83_01_01_.add(R.id.mid_huo_Shipment_ps3_light);
-        _83_01_01_.add(R.id.mid_open_up_hr_light);
-        _83_01_01_.add(R.id.mid_close_down_hr_light);
+        checkLight.put("555A0183060100000000", R.id.mid_Drop_goods_ps1_light);
+        checkLight.put("555A0183070100000000", R.id.mid_platform_ps2_light);
+        checkLight.put("555A0183080100000000", R.id.mid_huo_Shipment_ps3_light);
 
-        _83_02_01_.add(R.id.mid_platform_light);
-        _83_02_01_.add(R.id.mid_Pick_up_goods_open_light);
-        _83_02_01_.add(R.id.mid_platform_ps2_light);
-
-        checkLight_set.put("555A0183010100000000", _83_01_01_);
-        checkLight_set.put("555A0183020100000000", _83_02_01_);
-
-//        checkLight.put("55 5A 01 83 01 01 00 00 00 00", R.id.mid_Upper_limit_light);
-//        checkLight.put("55 5A 01 83 02 01 00 00 00 00", R.id.mid_platform_light);
-//        checkLight.put("55 5A 01 83 01 01 00 00 00 00", R.id.mid_lower_limit_light);
-//        checkLight.put("55 5A 01 83 02 01 00 00 00 00", R.id.mid_Pick_up_goods_open_light);
-//        checkLight.put("55 5A 01 83 01 01 00 00 00 00", R.id.mid_Pick_up_goods_close_light);
-//
-//
-//
-//        checkLight.put("55 5A 01 83 01 01 00 00 00 00", R.id.mid_Drop_goods_ps1_light);
-//        checkLight.put("55 5A 01 83 02 01 00 00 00 00", R.id.mid_platform_ps2_light);
-//        checkLight.put("55 5A 01 83 01 01 00 00 00 00", R.id.mid_huo_Shipment_ps3_light);
-//
-//
-//        checkLight.put("55 5A 01 83 01 01 00 00 00 00", R.id.mid_open_up_hr_light);
-//        checkLight.put("55 5A 01 83 01 01 00 00 00 00", R.id.mid_close_down_hr_light);
+        checkLight.put("555A0183090100000000", R.id.mid_open_up_hr_light);
+        checkLight.put("555A0183100100000000", R.id.mid_close_down_hr_light);
     }
 
 
@@ -385,8 +420,8 @@ public class Mid_MachineActivity extends AppCompatActivity implements View.OnTou
                 int i1 = 0;
                 int i2 = 0;
                 try {
-                    i1 = Integer.valueOf(msg1);
-                    i2 = Integer.valueOf(msg2);
+                    i1 = Integer.parseInt(msg1);
+                    i2 = Integer.parseInt(msg2);
                 } catch (Exception e) {
                     Toast.makeText(Mid_MachineActivity.this, "对分, 秒编辑框分别请输入0-9的个位数", Toast.LENGTH_LONG).show();
                 }

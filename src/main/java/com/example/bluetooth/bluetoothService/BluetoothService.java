@@ -8,6 +8,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Handler;
 import android.os.IBinder;
 
 import java.io.IOException;
@@ -18,6 +19,9 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.UUID;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 public class BluetoothService extends Service {
     private static final String TAG = "com.example.bluetooth.bluetoothService.BluetoothService.";
@@ -27,9 +31,18 @@ public class BluetoothService extends Service {
     public static final String BT_CONNECTED = TAG + "bt.connected";
     public static final String BT_RECEIVE_CMD = TAG + "bt.receiveDataTask.cmd";
 
+
+    private final ThreadPoolExecutor service = new ThreadPoolExecutor(
+            1,
+            1,
+            0L,
+            TimeUnit.MILLISECONDS,
+            new LinkedBlockingQueue<Runnable>());
+
+    private int count = 0;
     private BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver() {
         @Override
-        public void onReceive(Context context, Intent intent) {
+        public void onReceive(Context context, final Intent intent) {
             String action = intent.getAction();
             if(action != null){
                 if(action.equals(BT_CONNECT)){
@@ -37,10 +50,21 @@ public class BluetoothService extends Service {
                     connect(mac);
                 }
                 if(action.equals(BT_SEND)){
-                    String msg = intent.getStringExtra(BT_SEND);
-                    System.out.println("htr: msg = " + msg);
+                    final String msg = intent.getStringExtra(BT_SEND);
                     try {
-                        os.write(hex2byte(msg.getBytes()));
+                        service.execute(new Runnable() {
+                            @Override
+                            public void run() {
+                                try {
+                                    os.write(hex2byte(msg.getBytes()));
+                                    os.flush();
+                                    //注释掉，移除延迟
+//                                    Thread.sleep(300);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        });
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -277,7 +301,6 @@ public class BluetoothService extends Service {
                     }
 
                     num = is.read(receive);
-
                    if(num + destPos == 10){
                        System.arraycopy(receive, 0, buf, destPos, 10 - destPos);
                        // buf 满 处理data
