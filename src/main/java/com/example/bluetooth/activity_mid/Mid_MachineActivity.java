@@ -40,7 +40,6 @@ public class Mid_MachineActivity extends AppCompatActivity implements View.OnTou
      * 根据收到的信号确认信号灯id
      */
     private final static Map<String, Integer> checkLight = new HashMap<>();
-    private final static Map<String, HashSet<Integer>> checkLight_set = new HashMap<>();
 
     /**
      * 开启子线程， 更新UI
